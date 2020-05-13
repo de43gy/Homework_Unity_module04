@@ -39,17 +39,27 @@ namespace Homework_Unity_module04_task_1
             #endregion
 
             #region Основные переменные
+            //за сколько месяцев мы храним данные
+            int numberOfMonths = 12;
             //Поступления денежных средств по месяцам
-            int[] income;
+            int[] income = new int[numberOfMonths];
             //Расходы по месяцам
-            int[] expense;
+            int[] expense = new int[numberOfMonths];
             //Массив для вычисления прибыли
-            int[] profit;
-            //TODO размер массива может быть больше 12, но обсчитываться будут 12 последних месяцев
+            int[] profit = new int[numberOfMonths];
             //Количество месяцев с прибылью
             int monthsWithProfit;
+            //Генератор псевдослучайных чисел для заполнения данными массивов
+            Random random = new Random();
             #endregion
 
+            //заполнение массивов с расходами и поступлениями, вычисление прибыли
+            for (int i=0; i < numberOfMonths; i++)
+            {
+                income[i] = random.Next(0, 100000);
+                expense[i] = random.Next(0, 100000);
+                profit[i] = income[1] - expense[1];
+            } 
         }
     }
 }
