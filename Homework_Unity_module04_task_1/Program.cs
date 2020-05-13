@@ -36,7 +36,7 @@ namespace Homework_Unity_module04_task_1
             // Худшая прибыль в месяцах: 7, 4, 1, 5, 12
             // Месяцев с положительной прибылью: 10
 
-            Console.WriteLine("Hello World!");
+            
         }
     }
 }
