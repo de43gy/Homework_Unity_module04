@@ -70,16 +70,26 @@ namespace Homework_Unity_module04_task_1
             }
             #endregion
 
-            #region вывод на экран
+            #region вывод на экран таблицы
             //Заголовок таблицы
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("{0, -20} {1, -20} {2, -20} {3, -20}\n", "Месяц", "Доход, руб.", "Расход, руб.", "Прибыль, руб");
 
             //Вывод данных
+            //TODO сделать выделение цветом для месяцев с прибылью 0 и меньше
             Console.ForegroundColor = ConsoleColor.Green;
             for (int i = 0; i < numberOfMonths; i++)
             {
                 Console.WriteLine("{0,-20} {1,-20} {2,-20} {3,-20}", monthsNames[i], income[i], expense[i], profit[i]);
+            }
+            Console.ReadKey();
+            #endregion
+
+            #region расчет худших показателей
+            Array.Sort(profit);
+            foreach (var e in profit)
+            {
+                Console.WriteLine($"{e} ");
             }
             Console.ReadKey();
             #endregion
