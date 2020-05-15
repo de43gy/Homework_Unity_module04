@@ -72,6 +72,7 @@ namespace Homework_Unity_module04_task_1
 
             #region вывод на экран
             //Заголовок таблицы
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("{0, tab} {1, -20} {2, -20} {3, -20}", "Месяц", "Доход, руб.", "Расход, руб.", "Прибыль, руб");
 
             //Вывод данных
