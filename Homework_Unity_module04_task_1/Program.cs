@@ -73,12 +73,13 @@ namespace Homework_Unity_module04_task_1
             #region вывод на экран
             //Заголовок таблицы
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("{0, tab} {1, -20} {2, -20} {3, -20}", "Месяц", "Доход, руб.", "Расход, руб.", "Прибыль, руб");
+            Console.WriteLine("{0, -20} {1, -20} {2, -20} {3, -20}\n", "Месяц", "Доход, руб.", "Расход, руб.", "Прибыль, руб");
 
             //Вывод данных
+            Console.ForegroundColor = ConsoleColor.Green;
             for (int i = 0; i < numberOfMonths; i++)
             {
-                Console.WriteLine("{0,-10} {1,-20} {2,-20} {3,-20}", monthsNames[i], income[i], expense[i], profit[i]);
+                Console.WriteLine("{0,-20} {1,-20} {2,-20} {3,-20}", monthsNames[i], income[i], expense[i], profit[i]);
             }
             Console.ReadKey();
             #endregion
