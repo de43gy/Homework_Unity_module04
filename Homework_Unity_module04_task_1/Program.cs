@@ -52,14 +52,22 @@ namespace Homework_Unity_module04_task_1
             //Генератор псевдослучайных чисел для заполнения данными массивов
             Random random = new Random();
             #endregion
-
+            
+            #region заполнение данными и расчеты
             //заполнение массивов с расходами и поступлениями, вычисление прибыли
-            for (int i=0; i < numberOfMonths; i++)
+            for (int i = 0; i < numberOfMonths; i++)
             {
                 income[i] = random.Next(0, 100000);
                 expense[i] = random.Next(0, 100000);
-                profit[i] = income[1] - expense[1];
-            } 
+                profit[i] = income[i] - expense[i];
+            }
+            #endregion
+
+            #region вывод на экран
+            //Заголовок таблицы
+            Console.WriteLine("{0,-10} {1,-20} {2,-20} {3,-20}", "Месяц", "Доход, руб.", "Расход, руб.", "Прибыль, руб");
+            Console.ReadKey();
+            #endregion
         }
     }
 }
