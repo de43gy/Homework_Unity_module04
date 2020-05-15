@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 
 namespace Homework_Unity_module04_task_1
 {
@@ -49,6 +50,12 @@ namespace Homework_Unity_module04_task_1
             int[] profit = new int[numberOfMonths];
             //Количество месяцев с прибылью
             int monthsWithProfit;
+            //месяца для вывода в таблице
+            string[] monthsNames = new string[]
+            {"Январь", "Февраль", "Март",
+                "Апрель", "Май", "Июнь",
+                "Июль", "Август", "Сентябрь",
+                "Октябрь", "Ноябрь", "Декабрь"};
             //Генератор псевдослучайных чисел для заполнения данными массивов
             Random random = new Random();
             #endregion
@@ -65,7 +72,13 @@ namespace Homework_Unity_module04_task_1
 
             #region вывод на экран
             //Заголовок таблицы
-            Console.WriteLine("{0,-10} {1,-20} {2,-20} {3,-20}", "Месяц", "Доход, руб.", "Расход, руб.", "Прибыль, руб");
+            Console.WriteLine("{0, tab} {1, -20} {2, -20} {3, -20}", "Месяц", "Доход, руб.", "Расход, руб.", "Прибыль, руб");
+
+            //Вывод данных
+            for (int i = 0; i < numberOfMonths; i++)
+            {
+                Console.WriteLine("{0,-10} {1,-20} {2,-20} {3,-20}", monthsNames[i], income[i], expense[i], profit[i]);
+            }
             Console.ReadKey();
             #endregion
         }
