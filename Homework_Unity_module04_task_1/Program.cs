@@ -64,8 +64,8 @@ namespace Homework_Unity_module04_task_1
             //заполнение массивов с расходами и поступлениями, вычисление прибыли
             for (int i = 0; i < numberOfMonths; i++)
             {
-                income[i] = random.Next(0, 100000);
-                expense[i] = random.Next(0, 100000);
+                income[i] = random.Next(0, 10) * 1000;
+                expense[i] = random.Next(0, 10) * 1000;
                 profit[i] = income[i] - expense[i];
             }
             #endregion
